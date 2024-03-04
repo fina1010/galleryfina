@@ -75,7 +75,7 @@ function loadMoreData(paginate){
                                     ${x.judul}
                                 </div>
                                 <div class="text-xs  text-abuabu">
-                                   ${x.tanggal}
+                                   ${new Date(x.tanggal).toLocaleDateString("id")}
                                 </div>
                             </div>
                         </div>
@@ -106,6 +106,7 @@ function loadMoreData(paginate){
             },
             success: function(res){
                 console.log(res)
+                location.reload()
             },
             error: function(jqXHR, textStatus, errorThrown){
                 alert('gagal')

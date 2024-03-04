@@ -2,7 +2,7 @@
         <div class="flex flex-wrap items-center justify-center max-w-screen-xl p-4 mx-auto">
             <a href="/explore" class="mr-4">Beranda</a>
             <a href="/upload" class="mr-4">Upload</a>
-            <form action="/upload" method="get">
+            <form action="/explore" method="get">
                 <input type="text" class="px-4 py-1 mr-4 rounded-full border-2 mt-4" placeholder="Search ..." name="cari">
             </form>
             <a href="/edit_profil" class="mr-4">PIN</a>

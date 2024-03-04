@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PinController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FotoController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\MypinController;
 use App\Http\Controllers\UploadController;
@@ -64,6 +65,14 @@ Route::middleware('auth')->group(function(){
     Route::get('/profilsaya', function () {
         return view('page.profilsaya');
     });
+
+    //edit postingan
+    Route::get('/edit_postingan/{id}', [FotoController::class, 'editpostingan']);
+    Route::get('/hapus/{id}', [FotoController::class, 'hapuspostingan']);
+    Route::get('/hapusalbum/{id}', [FotoController::class, 'hapusalbum']);
+    Route::get('/edit/{id}', [FotoController::class, 'editfoto']);
+
+
     Route::get('/dataprofile/', [MypinController::class, 'getdataprofile']);
     Route::get('/getdataprofile/', [MypinController::class, 'getdata']);
 

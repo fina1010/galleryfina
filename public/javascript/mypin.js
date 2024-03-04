@@ -75,7 +75,7 @@ const getExplore =()=>{
                                     ${x.judul}
                                 </div>
                                 <div class="text-xs text-abuabu">
-                                    ${x.tanggal}
+                                ${new Date(x.tanggal).toLocaleDateString("id")}
                                 </div>
                             </div>
                         </div>
@@ -84,6 +84,8 @@ const getExplore =()=>{
                             <small>${x.jml_comment}</small>
                             <span class="bi ${x.idUserLike === x.useractive ? 'bi-heart-fill text-red-800': 'bi-heart'} bi-heart" onclick="likes(this, ${x.id})"></span>
                             <small>${x.jml_like}</small>
+                            <a href="/edit/${x.id}" class="bg-green-200 rounded-md"><i class="bi bi-pencil"></i></a>
+                            <a href="/hapus/${x.id}" class="bg-red-600 rounded-md"><i class="bi bi-trash3"></i></a>
                         </div>
                     </div>
                 </div>

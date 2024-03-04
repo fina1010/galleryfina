@@ -27,6 +27,7 @@
                         </a>
                         <div class="text-center font-semibold shadow-xl">
                             {{ $album->nama_album }}
+                            <a href="/hapusalbum/{{$album->id}}" class="px-2 py-0 bg-red-600 rounded-md"><i class="bi bi-trash3 "></i></a>
                         </div>
                     </div>
                 </div>
